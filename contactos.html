@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mi Página Web</title>
+        <link rel="stylesheet" type="text/css" href="stylecontactos.css">
+    </head>
+    <body>
+        <header>
+            <div class="back">
+                <div class="menu container">
+                    <a href="index.html" class="logo">Francisco Faba</a>
+                    <input type="checkbox" id="menu"/>
+                    <label for="menu">
+                        <img src="images/660376.png" class="menu-icono" alt="">
+                    </label>
+                    <nav class="navbar">
+                        
+                        <ul>
+                            <li><a class="BotonNav" href="galeria.html" >Galería</a></li>
+                            <li><a class="BotonNav" href="contactos.html" >Contacto</a></li>
+                            <li><a class="BotonNav" href="sobremi.html" >Sobre mí</a></li>
+                            <li><a class="BotonNav" href="calculos.html" >Cálculos</a></li>
+                        </ul>
+                    </nav>
+                </div>    
+            </div>
+        </header>
+
+        <article class="contenedoor">
+            <div class="contenedorForm">
+                <h1>Contacto</h1>
+                <form id="formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required><br><br>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required><br><br>
+
+                    <label for="email">email: </label>
+                    <input type="text" id="email" required><br><br>
+
+                    <label for="asunto">asunto:</label>
+                    <input type="text" id="asunto" required><br><br>
+
+                    <label for="mensaje">mensaje:</label>
+                    <input type="text" id="mensaje" required><br><br>
+
+
+                    <button type="submit">enviar</button>
+                </form>
+                <div id="tarjeta" style="display: none;">
+                    <h3>mensaje enviado!</h3>
+
+                </div>
+
+                <script>
+                    var formulario = document.getElementById('formulario')
+                    var tarjeta = document.getElementById('tarjeta')
+
+                    formulario.addEventListener("submit", function(event){
+                        event.preventDefault();
+                        var nombre = document.getElementById('nombre').value
+                        var apellido = document.getElementById('apellido').value
+                        var email = document.getElementById('email').value
+                        var asunto = document.getElementById('asunto').value
+                        var mensaje= document.getElementById('mensaje').value
+                        tarjeta.style.display = 'block'
+
+                        document.getElementById('nombre').value = ''
+                        document.getElementById('apellido').value = ''
+                        document.getElementById('email').value = ''
+                        document.getElementById('asunto').value = ''
+                        document.getElementById('mensaje').value = ''
+
+                    });
+
+
+                </script>
+            </div>
+
+        </article>
+    </body>
+</html>

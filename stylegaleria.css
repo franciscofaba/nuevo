@@ -1,0 +1,173 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(5, 7, 12,0.75),rgba(5, 7, 12,0.75)), url(galaxy-nature-aesthetic-background-starry-sky-mountain-remixed-media.jpg)
+    no-repeat center center fixed;
+    background-size: cover;
+
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back{
+    padding:32px 0;
+    background-color: #2a394f;
+
+}
+.menu {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 24px;
+    color: #b5bdc2;
+    font-weight: 800;
+    text-transform: uppercase;
+
+}
+.menu .navbar ul li{
+    position: relative;
+    float: left; 
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #f7f7ff;
+    display: block;
+
+}
+.menu .navbar ul li a:hover{
+    color:#15a4f9;
+
+}
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    font-size: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+
+}
+
+@media only screen and (max-width:991px) {
+
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+
+    }
+
+    .back {
+        padding: 47px 0;
+
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2a394f;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .menu-icono {
+        width: 50px;
+        height: 50px;
+
+    }
+}
+
+
+
+h1{
+    color: #f7f7ff;
+    text-align: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+
+}
+
+.img-gallery{
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+
+}
+
+.img-gallery img{
+    width:100%;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.img-gallery img:hover{
+    transform: scale(1.2);
+}
+
+.full-img{
+
+    width:100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(5, 7, 12,0.9);
+    top:0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.full-img span{
+    position: absolute;
+    top:5%;
+    right:5%;
+    font-size: 30px;
+    color: #f7f7ff;
+    cursor: pointer;
+}
+.full-img img{
+    width: 25%;
+    max-width: 200;
+}

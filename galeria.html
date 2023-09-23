@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mi Página Web</title>
+        <link rel="stylesheet" type="text/css" href="stylegaleria.css">
+    </head>
+    <body>
+        <header>
+            <div class="back">
+                <div class="menu container">
+                    <a href="index.html" class="logo">Francisco Faba</a>
+                    <input type="checkbox" id="menu"/>
+                    <label for="menu">
+                        <img src="images/660376.png" class="menu-icono" alt="">
+                    </label>
+                    <nav class="navbar">
+                        
+                        <ul>
+                            <li><a class="BotonNav" href="galeria.html" >Galería</a></li>
+                            <li><a class="BotonNav" href="contactos.html" >Contacto</a></li>
+                            <li><a class="BotonNav" href="sobremi.html" >Sobre mí</a></li>
+                            <li><a class="BotonNav" href="calculos.html" >Cálculos</a></li>
+                        </ul>
+                    </nav>
+                </div>    
+            </div>
+        </header>
+        <h1><span>Galeria de fotos</span></h1>
+
+        <div class="full-img" id="fullImgBox">
+            <img src="fotos/foto4.jpeg" id="fullimg" alt="">
+            <span onclick="closeImg()">X</span>
+        </div>
+        <script src="script.js"></script>
+
+        <div class="img-gallery">
+            <img src="fotos/foto4.jpeg" onclick="openFullImg(this.src)" alt="">
+            <img src="fotos/foto5.jpeg" onclick="openFullImg(this.src)" alt="">
+            <img src="fotos/foto3.jpeg" onclick="openFullImg(this.src)" alt="">
+            <img src="fotos/foto1.jpeg" onclick="openFullImg(this.src)" alt="">
+            <img src="fotos/foto2.jpeg" onclick="openFullImg(this.src)" alt="">
+            <img src="fotos/foto6.jpeg" onclick="openFullImg(this.src)" alt="">
+        </div>
+        <script src="script.js"></script>
+
+
+
+    </body>
+</html>
